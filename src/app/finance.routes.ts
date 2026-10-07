@@ -11,4 +11,12 @@ export const routes: Routes = [
       import('./finance/records-page.component').then((m) => m.RecordsPageComponent) },
   { path: 'records/new', title: 'Registrar', loadComponent: () =>
       import('./finance/record-form-page.component').then((m) => m.RecordFormPageComponent) },
+  { path: 'products', title: 'Inventario', loadComponent: () =>
+      import('./finance/products-page.component').then((m) => m.ProductsPageComponent) },
+  { path: 'products/new', title: 'Nuevo producto', loadComponent: () =>
+      import('./finance/product-form-page.component').then((m) => m.ProductFormPageComponent) },
+  { path: 'products/:id', title: 'Producto', loadComponent: () =>
+      import('./finance/product-detail-page.component').then((m) => m.ProductDetailPageComponent) },
+  { path: 'products/:id/edit', title: 'Editar producto', loadComponent: () =>
+      import('./finance/product-form-page.component').then((m) => m.ProductFormPageComponent) },
 ];
