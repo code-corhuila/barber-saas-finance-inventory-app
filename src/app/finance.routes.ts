@@ -6,7 +6,9 @@ import { Routes } from '@angular/router';
  * screen is lazy, so the shell downloads only what is opened.
  */
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'records' },
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+  { path: 'dashboard', title: 'Mi barbería', loadComponent: () =>
+      import('./finance/dashboard-page.component').then((m) => m.DashboardPageComponent) },
   { path: 'records', title: 'Finanzas', loadComponent: () =>
       import('./finance/records-page.component').then((m) => m.RecordsPageComponent) },
   { path: 'records/new', title: 'Registrar', loadComponent: () =>
